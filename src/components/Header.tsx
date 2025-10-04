@@ -33,10 +33,15 @@ export function Header() {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="cursor-pointer"
+            className="cursor-pointer flex items-center"
             onClick={() => scrollToSection('home')}
           >
-            <h1 className="text-2xl font-semibold text-primary">Ikigai Soul Wellness</h1>
+            <img
+              src="/Ikigai logo.png"
+              alt="Ikigai Soul Wellness Logo"
+              className="h-10 w-10 mr-3 inline-block align-middle rounded-full shadow"
+            />
+            <h1 className="text-2xl font-semibold text-primary"><span className="text-[#8C4AA4] text-3xl font-['Great_Vibes']">Ikigai </span > Soul Wellness</h1>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -53,8 +58,8 @@ export function Header() {
               </motion.button>
             ))}
             <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-black text-white hover:bg-black/90"
+              onClick={() => window.location.href = '/form'}
+              className="bg-[#9d33c4] text-white hover:bg-[#9d33c4]/75"
             >
               Book Now
             </Button>

@@ -31,7 +31,7 @@ export function Hero() {
           className="text-5xl md:text-7xl mb-6"
         >
           Welcome to
-          <span className="block text-6xl md:text-8xl bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent pb-2.5 md:pb-4">
+          <span className="block font-['Great_Vibes']  text-6xl md:text-8xl bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent pb-2.5 md:pb-4">
   Ikigai
 </span>
         </motion.h1>
@@ -55,7 +55,7 @@ export function Hero() {
           <Button
             size="lg"
             onClick={() => scrollToSection('services')}
-            className="bg-white text-black hover:bg-white/90 px-8 py-6 text-lg"
+            className="bg-[#9d33c4] text-white hover:bg-[#9d33c4]/75 hover:text-black px-8 py-6 text-lg"
           >
             Explore Services
           </Button>
@@ -63,7 +63,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             onClick={() => scrollToSection('contact')}
-            className="border-white text-white hover:text-black hover:bg-white  px-8 py-6 text-lg"
+            className="border-white text-white hover:text-white hover:bg-[#9d33c4]  px-8 py-6 text-lg"
           >
             Book Consultation
           </Button>

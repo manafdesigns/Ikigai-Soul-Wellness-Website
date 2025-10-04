@@ -43,8 +43,8 @@ export function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            About Serenity
+          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
+            About Ikigai
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Founded with a vision to create a sanctuary of healing and wellness, Serenity Wellness Center 

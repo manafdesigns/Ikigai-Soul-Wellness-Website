@@ -74,7 +74,7 @@ export function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -177,7 +177,7 @@ export function Contact() {
                   >
                     <Button 
                       type="submit" 
-                      className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-6 text-lg"
+                      className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] hover:from-[#9674c8] hover:bg-[#9d33c4]/75 text-white py-6 text-lg"
                     >
                       <Send className="w-5 h-5 mr-2" />
                       Send Message

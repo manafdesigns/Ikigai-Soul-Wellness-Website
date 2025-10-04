@@ -99,7 +99,7 @@ export function Blog() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
             Wellness Blog
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -252,7 +252,7 @@ export function Blog() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300"
+            className="bg-gradient-to-r from-[#9674c8] to-[#9b04d2]  text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300"
           >
             Load More Articles
           </motion.button>
