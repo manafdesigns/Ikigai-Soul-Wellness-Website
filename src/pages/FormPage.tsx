@@ -1,10 +1,7 @@
 import { motion } from 'motion/react';
 
 export default function FormPage() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  };
+  
 
   return (
     <motion.div
