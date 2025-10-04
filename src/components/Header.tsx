@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-
+import { useNavigate } from 'react-router-dom';
 const navItems = [
   { name: 'Home', id: 'home' },
   { name: 'Services', id: 'services' },
@@ -13,7 +13,7 @@ const navItems = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -58,7 +58,7 @@ export function Header() {
               </motion.button>
             ))}
             <Button
-              onClick={() => window.location.href = '/form'}
+              onClick={() => navigate('/form')}
               className="bg-[#9d33c4] text-white hover:bg-[#9d33c4]/75"
             >
               Book Now
