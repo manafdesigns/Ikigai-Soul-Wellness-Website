@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Sparkles, Heart, Brain, Dumbbell, Leaf, Users } from 'lucide-react';
+import { Sparkles, Heart, Brain, Dumbbell, Leaf } from 'lucide-react';
 
 const services = [
   {
