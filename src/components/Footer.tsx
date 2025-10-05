@@ -51,7 +51,7 @@ export function Footer() {
           >
             <img className="w-screen h-full" src="https://tse1.mm.bing.net/th/id/OIP.PsgtNhW9G55Q5jW3AKUvLgHaDv?pid=Api&P=0&h=220" alt="" />
             <p className="text-lg ">
-              The Department of Home Affairs acknowledges the Traditional Custodians of Country throughout Australia and their continuing connection to land, sea and community. We pay our respects to all Aboriginal and Torres Strait Islander peoples, their cultures and to their Elders past and present.
+              We acknowledge that the Traditional Custodians of Country throughout Australia and their continuing connection to land, sea and community. We pay our respects to all Aboriginal and Torres Strait Islander peoples, their cultures and to their Elders past and present.
             </p>
           </motion.div>
 
