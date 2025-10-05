@@ -6,45 +6,38 @@ import { Sparkles, Heart, Brain, Dumbbell, Leaf, Users } from 'lucide-react';
 const services = [
   {
     icon: Heart,
-    title: 'Massage Therapy',
-    description: 'Therapeutic massages to release tension, improve circulation, and promote deep relaxation.',
+    title: 'Reiki Healing',
+    description: 'Energy healing sessions to balance your chakras and promote overall well-being.',
     image: 'https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXNzYWdlJTIwdGhlcmFweSUyMHdlbGxuZXNzfGVufDF8fHx8MTc1OTU3ODMzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     price: 'From $80'
   },
   {
     icon: Brain,
-    title: 'Meditation Classes',
+    title: 'Meditation & Mindfulness',
     description: 'Guided meditation sessions to reduce stress, enhance mindfulness, and find inner peace.',
     image: 'https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwaW50ZXJpb3IlMjBwZWFjZWZ1bHxlbnwxfHx8fDE3NTk1NTk3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     price: 'From $25'
   },
   {
     icon: Dumbbell,
-    title: 'Yoga & Movement',
-    description: 'Dynamic yoga flows and movement practices to strengthen body and calm mind.',
-    image: 'https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwaW50ZXJpb3IlMjBwZWFjZWZ1bHxlbnwxfHx8fDE3NTk1NTk3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Access Bars Therapy',
+    description: 'A gentle touch therapy that releases limiting beliefs and promotes mental clarity.',
+    image: 'https://t3.ftcdn.net/jpg/06/96/29/44/240_F_696294441_lIZImFPIuQf9BaIQsSmT1qmJeKXhr0Nt.jpg',
     price: 'From $35'
   },
   {
     icon: Leaf,
-    title: 'Nutrition Counseling',
-    description: 'Personalized nutrition guidance to support your wellness journey and healthy lifestyle.',
-    image: 'https://images.unsplash.com/photo-1670165088604-5a39f5c1be51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwbGlmZXN0eWxlJTIwbnV0cml0aW9ufGVufDF8fHx8MTc1OTQ5NTIxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Ayurvedic Wellness',
+    description: 'Holistic Ayurvedic consultations and treatments tailored to your unique constitution.',
+    image: 'https://www.itoozhiayurveda.in/wp-content/uploads/2023/01/Ayurvedic-medicine-scaled.jpg',
     price: 'From $90'
   },
   {
     icon: Sparkles,
-    title: 'Aromatherapy',
-    description: 'Essential oil treatments to enhance mood, reduce stress, and promote healing.',
+    title: 'Holistic Life Transformation',
+    description: 'Personalized coaching to help you achieve balance and fulfillment in all areas of life.',
     image: 'https://images.unsplash.com/photo-1655970580622-4a547789c850?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGNlbnRlciUyMHNwYSUyMG1lZGl0YXRpb258ZW58MXx8fHwxNzU5NTkyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     price: 'From $60'
-  },
-  {
-    icon: Users,
-    title: 'Group Workshops',
-    description: 'Community-focused wellness workshops covering mindfulness, stress management, and more.',
-    image: 'https://images.unsplash.com/photo-1662549905044-e3f71c293989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRlYW0lMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc1OTU5MjU2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    price: 'From $45'
   }
 ];
 
@@ -95,9 +88,9 @@ export function Services() {
                   >
                     <service.icon className="w-6 h-6 text-primary" />
                   </motion.div>
-                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-semibold text-primary">{service.price}</span>
-                  </div>
+                  </div> */}
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">

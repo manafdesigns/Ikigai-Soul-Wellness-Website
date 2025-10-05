@@ -47,7 +47,7 @@ export function About() {
             About Ikigai
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Founded with a vision to create a sanctuary of healing and wellness, Serenity Wellness Center 
+            Founded with a vision to create a sanctuary of healing and wellness, Ikigai Wellness Center 
             has been transforming lives through holistic health practices for over a decade.
           </p>
         </motion.div>
@@ -94,9 +94,7 @@ export function About() {
               serving thousands of clients on their journey to better health and inner peace.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              We believe that true wellness encompasses the mind, body, and spirit. Our integrated 
-              approach combines ancient wisdom with modern science to provide personalized care 
-              that addresses your unique needs.
+              At Ikigai Soul Wellness you step into a serene space where healing meets purpose. We help you to release stress, recharge your energy & reconnect with your inner purpose.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full">Holistic Approach</div>

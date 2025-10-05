@@ -39,9 +39,14 @@ export function Header() {
             <img
               src="/Ikigai logo.png"
               alt="Ikigai Soul Wellness Logo"
-              className="h-10 w-10 mr-3 inline-block align-middle rounded-full shadow"
+              className="h-10 w-10 mr-3 "
             />
-            <h1 className="text-2xl font-semibold text-primary"><span className="text-[#8C4AA4] text-3xl font-['Great_Vibes']">Ikigai </span > Soul Wellness</h1>
+            <img
+              src="/Ikigai logo name.png"
+              alt="Ikigai Soul Wellness "
+              className="h-12 w-full  "
+            />
+            {/* <h1 className="text-2xl font-semibold text-primary"><span className="text-[#8C4AA4] text-3xl font-['Great_Vibes']">Ikigai </span > Soul Wellness</h1> */}
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -96,7 +101,7 @@ export function Header() {
                 </motion.button>
               ))}
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => navigate('/form')}
                 className="bg-primary hover:bg-primary/90 w-fit"
               >
                 Book Now
