@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
+
 import { Separator } from './ui/separator';
 import { Heart, Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -42,34 +41,20 @@ export function Footer() {
     <footer className="text-white" style={{ backgroundColor: "#030213" }}>
       {/* Newsletter Section */}
       <div className="border-b border-primary-foreground/10">
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
+            className=" flex  gap-10 items-center justify-center flex-col md:flex-row"
           >
-            <h3 className="text-2xl md:text-3xl mb-4">
-              Stay Connected to Your Wellness Journey
-            </h3>
-            <p className="text-primary-foreground/80 mb-8 text-lg">
-              Subscribe to our newsletter for wellness tips, exclusive offers, and updates on new services.
+            <img className="w-screen h-full" src="https://tse1.mm.bing.net/th/id/OIP.PsgtNhW9G55Q5jW3AKUvLgHaDv?pid=Api&P=0&h=220" alt="" />
+            <p className="text-lg ">
+              The Department of Home Affairs acknowledges the Traditional Custodians of Country throughout Australia and their continuing connection to land, sea and community. We pay our respects to all Aboriginal and Torres Strait Islander peoples, their cultures and to their Elders past and present.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20"
-              />
-              <Button 
-                className="bg-white text-black hover:bg-white/90 whitespace-nowrap px-8"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Subscribe
-              </Button>
-            </div>
           </motion.div>
+
         </div>
       </div>
 
@@ -89,7 +74,7 @@ export function Footer() {
               className="text-2xl mb-4 cursor-pointer"
               onClick={() => scrollToSection('home')}
             >
-              Serenity Wellness
+              Ikigai Soul Wellness
             </motion.h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Your trusted partner in holistic wellness, helping you find balance, 
@@ -191,8 +176,8 @@ export function Footer() {
               >
                 <MapPin className="w-5 h-5 mt-0.5 text-primary-foreground/60" />
                 <div>
-                  <p className="text-primary-foreground/80">123 Wellness Ave</p>
-                  <p className="text-primary-foreground/80">Serenity City, SC 12345</p>
+                  <p className="text-primary-foreground/80">4/10 EDMONDSON STREET</p>
+                  <p className="text-primary-foreground/80">CAMPBELL, ACT, 2612, Australia</p>
                 </div>
               </motion.div>
               <motion.div
@@ -203,7 +188,7 @@ export function Footer() {
                 className="flex items-center space-x-3"
               >
                 <Phone className="w-5 h-5 text-primary-foreground/60" />
-                <p className="text-primary-foreground/80">(555) 123-4567</p>
+                <p className="text-primary-foreground/80">+61 044 984 1838</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -213,7 +198,7 @@ export function Footer() {
                 className="flex items-center space-x-3"
               >
                 <Mail className="w-5 h-5 text-primary-foreground/60" />
-                <p className="text-primary-foreground/80">info@serenitywellness.com</p>
+                <p className="text-primary-foreground/80">ikigaisoulwellness@gmail.com</p>
               </motion.div>
             </div>
           </motion.div>
@@ -232,7 +217,7 @@ export function Footer() {
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-primary-foreground/60 text-center md:text-left">
-            © 2025 Serenity Wellness Center. All rights reserved.
+            © 2025 Ikigai Soul Wellness Center. All rights reserved.
           </p>
           <div className="flex items-center space-x-2 text-primary-foreground/60">
             <span>Made with</span>

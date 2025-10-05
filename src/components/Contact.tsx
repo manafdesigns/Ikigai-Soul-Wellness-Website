@@ -52,7 +52,7 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@serenitywellness.com', 'booking@serenitywellness.com'],
+      details: ['ikigaisoulwellness@gmail.com'],
       color: 'text-purple-600'
     },
     {
