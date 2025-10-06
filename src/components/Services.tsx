@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Sparkles, Heart, Brain, Dumbbell, Leaf } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -42,6 +43,7 @@ const services = [
 ];
 
 export function Services() {
+  const navigate = useNavigate();
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-white to-muted/50">
       <div className="container mx-auto px-4">
@@ -120,7 +122,7 @@ export function Services() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/form')}
             className="bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300"
           >
             Schedule Consultation

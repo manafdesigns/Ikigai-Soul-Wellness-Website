@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
+import { useNavigate } from 'react-router-dom';
 export function Hero() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -9,6 +9,7 @@ export function Hero() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -63,7 +64,7 @@ export function Hero() {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => navigate('/form')}
             className="border-white text-white hover:text-white hover:bg-[#9d33c4]  px-8 py-6 text-lg"
           >
             Book Consultation

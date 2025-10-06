@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 import { Separator } from './ui/separator';
-import { Heart, Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Facebook,  Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -31,10 +31,10 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Youtube, href: '#', label: 'YouTube' }
+    { icon: Facebook, href: 'https://www.facebook.com/ikigaisoulwellness', label: 'Facebook' },
+    // { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/ikigaisoulwellness/', label: 'Instagram' },
+    // { icon: Youtube, href: '#', label: 'YouTube' }
   ];
 
   return (
