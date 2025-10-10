@@ -8,37 +8,37 @@ const services = [
   {
     icon: Heart,
     title: 'Reiki Healing',
-    description: 'Energy healing sessions to balance your chakras and promote overall well-being.',
+    description: 'A powerful energy healing modality that works on the physical, emotional, and spiritual levels. Reiki helps release blocked energy, promotes deep relaxation, and supports natural healing.',
     image: 'https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXNzYWdlJTIwdGhlcmFweSUyMHdlbGxuZXNzfGVufDF8fHx8MTc1OTU3ODMzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    price: 'From $80'
+    price: '30 min – 50$ | 60 min -80$'
   },
   {
     icon: Brain,
     title: 'Meditation & Mindfulness',
-    description: 'Guided meditation sessions to reduce stress, enhance mindfulness, and find inner peace.',
+    description: 'Learn powerful tools to cultivate presence, reduce anxiety, and live with greater intention and calm.',
     image: 'https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwaW50ZXJpb3IlMjBwZWFjZWZ1bHxlbnwxfHx8fDE3NTk1NTk3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    price: 'From $25'
+    price: null
   },
   {
     icon: Dumbbell,
     title: 'Access Bars Therapy',
-    description: 'A gentle touch therapy that releases limiting beliefs and promotes mental clarity.',
+    description: 'An innovative, hands-on process that clears limiting beliefs and mental clutter stored in the brain. Access Bars helps you let go of fear, judgment, and old patterns, making space for clarity, ease, and change.',
     image: 'https://t3.ftcdn.net/jpg/06/96/29/44/240_F_696294441_lIZImFPIuQf9BaIQsSmT1qmJeKXhr0Nt.jpg',
-    price: 'From $35'
+    price: '60min -80$'
   },
   {
     icon: Leaf,
     title: 'Ayurvedic Wellness',
-    description: 'Holistic Ayurvedic consultations and treatments tailored to your unique constitution.',
+    description: 'Work with us to create lasting change in your health, mindset, and soul journey through personalized coaching and energy work.',
     image: 'https://www.itoozhiayurveda.in/wp-content/uploads/2023/01/Ayurvedic-medicine-scaled.jpg',
-    price: 'From $90'
+    price: '60min -80$'
   },
   {
     icon: Sparkles,
     title: 'Holistic Life Transformation',
     description: 'Personalized coaching to help you achieve balance and fulfillment in all areas of life.',
     image: 'https://images.unsplash.com/photo-1655970580622-4a547789c850?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGNlbnRlciUyMHNwYSUyMG1lZGl0YXRpb258ZW58MXx8fHwxNzU5NTkyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    price: 'From $60'
+    price: null
   }
 ];
 
@@ -90,9 +90,9 @@ export function Services() {
                   >
                     <service.icon className="w-6 h-6 text-primary" />
                   </motion.div>
-                  {/* <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full transition-opacity duration-300 opacity-100 md:opacity-0 group-hover:opacity-100">
                     <span className="text-sm font-semibold text-primary">{service.price}</span>
-                  </div> */}
+                    </div>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">

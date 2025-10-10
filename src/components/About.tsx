@@ -1,72 +1,75 @@
+import  { useState } from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Award, Users, Clock, Heart } from 'lucide-react';
+import {  X } from 'lucide-react';
 
-const stats = [
-  { icon: Users, label: 'Happy Clients', value: '2,500+' },
-  { icon: Clock, label: 'Years Experience', value: '15+' },
-  { icon: Award, label: 'Certifications', value: '50+' },
-  { icon: Heart, label: 'Success Stories', value: '1,200+' }
-];
+// const stats = [
+// 	{ icon: Users, label: 'Happy Clients', value: '2,500+' },
+// 	{ icon: Clock, label: 'Years Experience', value: '15+' },
+// 	{ icon: Award, label: 'Certifications', value: '50+' },
+// 	{ icon: Heart, label: 'Success Stories', value: '1,200+' }
+// ];
 
 const team = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Founder & Wellness Director',
-    image: 'https://images.unsplash.com/photo-1662549905044-e3f71c293989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRlYW0lMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc1OTU5MjU2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: 'Certified holistic health practitioner with 15+ years of experience in integrative wellness.'
-  },
-  {
-    name: 'Michael Thompson',
-    role: 'Lead Massage Therapist',
-    image: 'https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXNzYWdlJTIwdGhlcmFweSUyMHdlbGxuZXNzfGVufDF8fHx8MTc1OTU3ODMzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: 'Licensed massage therapist specializing in deep tissue and therapeutic bodywork.'
-  },
-  {
-    name: 'Emma Rodriguez',
-    role: 'Yoga & Meditation Instructor',
-    image: 'https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwaW50ZXJpb3IlMjBwZWFjZWZ1bHxlbnwxfHx8fDE3NTk1NTk3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: 'Certified yoga instructor and mindfulness coach with expertise in stress reduction techniques.'
-  }
+	{
+		name: 'Nikita Sameer',
+		role: 'Founder of Ikigai Soul Wellness, Canberrar',
+		image: 'https://images.unsplash.com/photo-1662549905044-e3f71c293989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRlYW0lMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc1OTU5MjU2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+		bio: 'Nikita is a certified energy healer and Ayurvedic practitioner with over a decade of experience in natural healing and mind-body wellness.'
+	}
+	// {
+	//   name: 'Michael Thompson',
+	//   role: 'Lead Massage Therapist',
+	//   image: 'https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXNzYWdlJTIwdGhlcmFweSUyMHdlbGxuZXNzfGVufDF8fHx8MTc1OTU3ODMzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+	//   bio: 'Licensed massage therapist specializing in deep tissue and therapeutic bodywork.'
+	// },
+	// {
+	//   name: 'Emma Rodriguez',
+	//   role: 'Yoga & Meditation Instructor',
+	//   image: 'https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwc3R1ZGlvJTIwaW50ZXJpb3IlMjBwZWFjZWZ1bHxlbnwxfHx8fDE3NTk1NTk3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+	//   bio: 'Certified yoga instructor and mindfulness coach with expertise in stress reduction techniques.'
+	// }
 ];
 
 export function About() {
-  return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
-            About Ikigai
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Founded with a vision to create a sanctuary of healing and wellness, Ikigai Wellness Center 
-            has been transforming lives through holistic health practices for over a decade.
-          </p>
-        </motion.div>
+	const [selectedMember, setSelectedMember] = useState<null | typeof team[0]>(null);
 
-        {/* Story Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="relative">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1655970580622-4a547789c850?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGNlbnRlciUyMHNwYSUyMG1lZGl0YXRpb258ZW58MXx8fHwxNzU5NTkyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Wellness Center Interior"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
-              <motion.div
+	return (
+		<section id="about" className="py-20 bg-white">
+			<div className="container mx-auto px-4">
+				{/* Header */}
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8 }}
+					viewport={{ once: true }}
+					className="text-center mb-16"
+				>
+					<h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
+						About Ikigai
+					</h2>
+					<p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+						Founded with a vision to create a sanctuary of healing and wellness, Ikigai Wellness Center
+						has been transforming lives through holistic health practices for over a decade.
+					</p>
+				</motion.div>
+
+				{/* Story Section */}
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+					<motion.div
+						initial={{ opacity: 0, x: -50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.8 }}
+						viewport={{ once: true }}
+					>
+						<div className="relative">
+							<ImageWithFallback
+								src="/facility.jpg"
+								alt="Wellness Center Interior"
+								className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+							/>
+							{/* <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -77,35 +80,57 @@ export function About() {
                   <div className="text-3xl font-bold text-primary">15+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
-              </motion.div>
-            </div>
-          </motion.div>
+              </motion.div> */}
+						</div>
+					</motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <h3 className="text-3xl mb-6">Our Story</h3>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              What started as a small meditation studio has grown into a comprehensive wellness center 
-              serving thousands of clients on their journey to better health and inner peace.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              At Ikigai Soul Wellness you step into a serene space where healing meets purpose. We help you to release stress, recharge your energy & reconnect with your inner purpose.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-8">
-              <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full">Holistic Approach</div>
-              <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Expert Team</div>
-              <div className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Personalized Care</div>
-            </div>
-          </motion.div>
-        </div>
+					<motion.div
+						initial={{ opacity: 0, x: 50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.8 }}
+						viewport={{ once: true }}
+						className="space-y-6"
+					>
+						<h3 className="text-3xl mb-6">Our Story</h3>
+						<p className="text-lg leading-relaxed text-muted-foreground">
+							Ikigai Soul Wellness is more than a wellness center — we are a community and a movement toward conscious living. Our name reflects our mission — helping you discover your ikigai, the unique purpose that gives your life meaning. Inspired by the Japanese concept of Ikigai — “a reason for being” — our center is dedicated to helping you rediscover balance, inner peace, and a deep connection to your life’s purpose. We help you release what no longer serves you and reconnect with your true self.
+						</p>
+						<p className="text-lg leading-relaxed text-muted-foreground">
+							At Ikigai Soul Wellness you step into a serene space where healing meets purpose. We help you to release stress, recharge your energy & reconnect with your inner purpose.
+						</p>
+						<div className="flex flex-wrap gap-4 mt-8">
+							<div className="bg-green-100 text-green-800 px-4 py-2 rounded-full">Holistic Approach</div>
+							<div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Expert Team</div>
+							<div className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Personalized Care</div>
+						</div>
+					</motion.div>
+				</div>
 
-        {/* Stats Section */}
-        <motion.div
+        	{/* IICT Membership Section */}
+			<motion.div
+				initial={{ opacity: 0, y: 40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.7 }}
+				viewport={{ once: true }}
+				className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16"
+			>
+				<img
+					src="/IICET_logo.jpg"
+					alt="IICT Logo"
+					className="h-16 w-auto object-contain"
+					style={{ background: 'white', borderRadius: '8px', padding: '4px' }}
+				/>
+				<p className="text-lg text-gray-700 text-center md:text-left max-w-xl">
+					We are proud members of the{' '}
+					<span className="font-semibold text-[#9d33c4]">
+						International Institute for Complementary Therapists (IICT)
+					</span>
+					, upholding the highest standards in holistic wellness and professional practice.
+				</p>
+			</motion.div>
+
+				{/* Stats Section */}
+				{/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -128,54 +153,108 @@ export function About() {
               <div className="text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
-        {/* Team Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h3 className="text-3xl mb-4">Meet Our Team</h3>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our experienced practitioners are dedicated to guiding you on your wellness journey.
-          </p>
-        </motion.div>
+				{/* Team Section */}
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8 }}
+					viewport={{ once: true }}
+					className="text-center mb-12"
+				>
+					<h3 className="text-3xl mb-4">Meet Our Practitioner</h3>
+					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+						Our experienced practitioner is dedicated to guiding you on your wellness journey.
+					</p>
+				</motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="group"
-            >
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
-                <div className="relative">
-                  <ImageWithFallback
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">
-                    {member.name}
-                  </h4>
-                  <p className="text-primary mb-3">{member.role}</p>
-                  <p className="text-muted-foreground">{member.bio}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+					{team.map((member, index) => (
+						<motion.div
+							key={member.name}
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, delay: index * 0.2 }}
+							viewport={{ once: true }}
+							whileHover={{ y: -10 }}
+							className="group col-span-1 md:col-start-2"
+						>
+							<Card className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
+								<div className="relative">
+									<ImageWithFallback
+										src={member.image}
+										alt={member.name}
+										className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+								</div>
+								<CardContent className="p-6">
+									<h4 className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">
+										{member.name}
+									</h4>
+									<p className="text-primary mb-3">{member.role}</p>
+									<p className="text-muted-foreground">{member.bio}</p>
+									<div className="mt-4">
+										<button
+											type="button"
+											onClick={() => setSelectedMember(member)}
+											className="inline-block px-5 py-2 rounded-full bg-[#9d33c4] text-white font-semibold hover:bg-primary/90 transition-colors duration-200"
+										>
+											Read More
+										</button>
+									</div>
+								</CardContent>
+							</Card>
+						</motion.div>
+					))}
+				</div>
+			</div>
+
+			{/* Modal */}
+			{selectedMember && (
+				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+					<div className="bg-white rounded-2xl  shadow-2xl w-full max-w-lg md:max-w-2xl p-4 md:p-8 relative animate-fadeIn mx-2">
+						<button
+							className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-gray-800"
+							onClick={() => setSelectedMember(null)}
+							aria-label="Close"
+						>
+							<X className="w-6 h-6" />
+						</button>
+						<div className="flex flex-col items-center">
+							<img
+								src={selectedMember.image}
+								alt={selectedMember.name}
+								className="w-24 h-24 md:w-30 md:h-30 rounded-full object-cover mb-4 border-4 border-[#9d33c4]"
+							/>
+							<h3 className="text-xl md:text-xl font-bold mb-2 text-center">{selectedMember.name}</h3>
+							<p className="text-primary mb-2 text-center">{selectedMember.role}</p>
+							<p className="text-gray-700 mb-4 text-sm md:text-base text-justify max-h-[50vh] md:max-h-[60vh] overflow-y-auto pr-1">
+								Nikita is a certified energy healer and Ayurvedic practitioner with over a decade of experience in natural healing and mind-body wellness. She completed her Bachelor of Ayurvedic Medicine and Surgery (BAMS) from the Government Ayurveda College, Trivandrum, India —one of India’s most prestigious institutions for Ayurvedic education. This rigorous training gave her a strong foundation in classical Ayurveda, natural medicine, and holistic wellness principles.
+								<br />
+								<br />
+								Guided by a deep passion for holistic health and inner harmony, she has dedicated her life to helping people reconnect with their natural state of balance—physically, mentally, and energetically. Her journey into the healing arts began with her deep curiosity about the human body, mind, and spirit, and how true health arises from the balance of all three
+								<br />
+								<br />
+								Thus, after moving to the UAE, Nikita expanded her healing journey by studying Reiki Levels 1, 2, and 3, as well as Access Bars Consciousness, from Dubai. These powerful modalities deepened her understanding of energy healing and the mind-body connection, allowing her to integrate ancient Ayurvedic wisdom with modern energy therapies.
+								<br />
+								<br />
+								In May 2025, she brought her vision to life by founding Ikigai Soul Wellness in Canberra, Australia—a tranquil space dedicated to personal transformation, holistic health, and spiritual awakening. She is also certified as the full member of International Institute for Complementary Therapists(IICT)with all the attendant rights and privileges
+							</p>
+							{/* Add more details here if available */}
+							<button
+								className="mt-2 px-6 py-2 rounded-full bg-[#9d33c4] text-white font-semibold hover:bg-primary/90 transition-colors"
+								onClick={() => setSelectedMember(null)}
+							>
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
+
+		
+		</section>
+	);
 }
