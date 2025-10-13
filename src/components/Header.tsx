@@ -33,18 +33,19 @@ export function Header() {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="cursor-pointer flex items-center"
+            className="cursor-pointer flex items-center min-w-0"
             onClick={() => scrollToSection('home')}
           >
             <img
               src="/Ikigai logo.png"
               alt="Ikigai Soul Wellness Logo"
-              className="h-10 w-10 mr-3 "
+              className="h-10 w-10 mr-2 flex-shrink-0"
             />
             <img
               src="/Ikigai logo name.png"
-              alt="Ikigai Soul Wellness "
-              className="h-12 w-full  "
+              alt="Ikigai Soul Wellness"
+              className="h-8 w-auto max-w-[120px] sm:max-w-[180px] md:max-w-none object-contain"
+              style={{ minWidth: 0 }}
             />
             {/* <h1 className="text-2xl font-semibold text-primary"><span className="text-[#8C4AA4] text-3xl font-['Great_Vibes']">Ikigai </span > Soul Wellness</h1> */}
           </motion.div>
