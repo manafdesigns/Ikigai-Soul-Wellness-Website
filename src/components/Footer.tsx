@@ -13,12 +13,12 @@ export function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'Massage Therapy', action: () => scrollToSection('services') },
-      { name: 'Meditation Classes', action: () => scrollToSection('services') },
-      { name: 'Yoga & Movement', action: () => scrollToSection('services') },
-      { name: 'Nutrition Counseling', action: () => scrollToSection('services') },
-      { name: 'Aromatherapy', action: () => scrollToSection('services') },
-      { name: 'Group Workshops', action: () => scrollToSection('services') }
+      { name: 'Reiki Healing', action: () => scrollToSection('services') },
+      { name: 'Access Bars Therapy', action: () => scrollToSection('services') },
+      { name: 'Ayurvedic Wellness', action: () => scrollToSection('services') }
+      // { name: 'Nutrition Counseling', action: () => scrollToSection('services') },
+      // { name: 'Aromatherapy', action: () => scrollToSection('services') },
+      // { name: 'Group Workshops', action: () => scrollToSection('services') }
     ],
     company: [
       { name: 'About Us', action: () => scrollToSection('about') },
@@ -188,7 +188,7 @@ export function Footer() {
                 className="flex items-center space-x-3"
               >
                 <Phone className="w-5 h-5 text-primary-foreground/60" />
-                <p className="text-primary-foreground/80">+61 044 984 1838</p>
+                <p className="text-primary-foreground/80">+61 44 984 1838</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}

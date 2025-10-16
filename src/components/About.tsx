@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import { motion } from 'motion/react';
-import { Card, CardContent } from './ui/card';
+// import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import {  X } from 'lucide-react';
 
@@ -15,8 +15,8 @@ const team = [
 	{
 		name: 'Nikita Sameer',
 		role: 'Founder of Ikigai Soul Wellness, Canberrar',
-		image: 'https://images.unsplash.com/photo-1662549905044-e3f71c293989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRlYW0lMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc1OTU5MjU2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-		bio: 'Nikita is a certified energy healer and Ayurvedic practitioner with over a decade of experience in natural healing and mind-body wellness.'
+		image: '/DR. NIKITHA.png',
+		bio: 'Nikita is a certified energy healer and Ayurvedic practitioner with over a decade of experience in natural healing and mind-body wellness.  She completed her Bachelor of Ayurvedic Medicine and Surgery (BAMS) from the Government Ayurveda College, Trivandrum, India —one of India’s most prestigious institutions for Ayurvedic education. This rigorous training gave her a strong foundation in classical Ayurveda, natural medicine, and holistic wellness principles.'
 	}
 	// {
 	//   name: 'Michael Thompson',
@@ -169,46 +169,43 @@ export function About() {
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div className="">
 					{team.map((member, index) => (
 						<motion.div
 							key={member.name}
 							initial={{ opacity: 0, y: 50 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: index * 0.2 }}
+							transition={{ duration: 0.6, delay: index * 0.15 }}
 							viewport={{ once: true }}
-							whileHover={{ y: -10 }}
-							className="group col-span-1 md:col-start-2"
+							className="flex flex-col md:flex-row items-center gap-6"
 						>
-							<Card className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
-								<div className="relative">
-									<ImageWithFallback
-										src={member.image}
-										alt={member.name}
-										className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-									/>
-									<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+							{/* Image on left */}
+							<div className="w-full md:w-1/3">
+								<ImageWithFallback
+									src={member.image}
+									alt={member.name}
+									className="w-full h-11/12 md:h-11/12 object-cover rounded-2xl shadow-lg"
+								/>
+							</div>
+
+							{/* Content on right */}
+							<div className="w-full md:w-2/3 space-y-3">
+								<h4 className="text-2xl font-semibold">{member.name}</h4>
+								<p className="text-primary mb-2">{member.role}</p>
+								<p className="text-muted-foreground">{member.bio}</p>
+								<div className="mt-4">
+									<button
+										type="button"
+										onClick={() => setSelectedMember(member)}
+										className="inline-block px-5 py-2 rounded-full bg-[#9d33c4] text-white font-semibold hover:bg-[#8b2aa8] transition-colors duration-200"
+									>
+										Read More
+									</button>
 								</div>
-								<CardContent className="p-6">
-									<h4 className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">
-										{member.name}
-									</h4>
-									<p className="text-primary mb-3">{member.role}</p>
-									<p className="text-muted-foreground">{member.bio}</p>
-									<div className="mt-4">
-										<button
-											type="button"
-											onClick={() => setSelectedMember(member)}
-											className="inline-block px-5 py-2 rounded-full bg-[#9d33c4] text-white font-semibold hover:bg-primary/90 transition-colors duration-200"
-										>
-											Read More
-										</button>
-									</div>
-								</CardContent>
-							</Card>
+							</div>
 						</motion.div>
 					))}
-				</div>
+                </div>
 			</div>
 
 			{/* Modal */}
@@ -226,7 +223,7 @@ export function About() {
 							<img
 								src={selectedMember.image}
 								alt={selectedMember.name}
-								className="w-24 h-24 md:w-30 md:h-30 rounded-full object-cover mb-4 border-4 border-[#9d33c4]"
+								className="w-24 h-30 md:w-30 md:h-36 rounded-full object-cover mb-4 border-4 border-[#9d33c4]"
 							/>
 							<h3 className="text-xl md:text-xl font-bold mb-2 text-center">{selectedMember.name}</h3>
 							<p className="text-primary mb-2 text-center">{selectedMember.role}</p>
@@ -254,7 +251,42 @@ export function About() {
 				</div>
 			)}
 
-		
-		</section>
-	);
+			{/* Certifications slider (slides left → right via repeating animation) */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mt-12"
+            >
+                <div className="overflow-hidden">
+                    {/* Inner strip animated horizontally. Duplicate set for seamless loop */}
+                    <motion.div
+                        aria-hidden="true"
+                        className="flex items-center gap-8 w-max"
+                        animate={{ x: ['0%', '-50%'] }}
+                        transition={{ duration: 14, ease: 'linear', repeat: Infinity }}
+                    >
+                        <img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Certificate 1" className="h-24 object-contain" />
+                        <img src="CBD.png" alt="Certificate 2" className="h-24 object-contain" />
+                        <img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Logo" className="h-24 object-contain" />
+                        <img src="/FIRST AID.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/REIKHI.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/ACCESS BARS LOGO.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/GOV KERALA AYURVEDA.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/BAMS.png" alt="Certificate 3" className="h-24 object-contain" />
+
+                        {/* duplicate */}
+                        <img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Certificate 1" className="h-24 object-contain" />
+                        <img src="CBD.png" alt="Certificate 2" className="h-24 object-contain" />
+                        <img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Logo" className="h-24 object-contain" />
+                        <img src="/FIRST AID.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/REIKHI.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/ACCESS BARS LOGO.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/GOV KERALA AYURVEDA.png" alt="Certificate 3" className="h-24 object-contain" />
+						<img src="/BAMS.png" alt="Certificate 3" className="h-24 object-contain" />
+                    </motion.div>
+                </div>
+            </motion.div>
+        </section>
+    );
 }

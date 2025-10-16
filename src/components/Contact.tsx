@@ -46,7 +46,7 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+61 044 984 1838'],
+      details: ['+61 44 984 1838'],
       color: 'text-blue-600'
     },
     {
