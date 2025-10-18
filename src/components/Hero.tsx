@@ -31,7 +31,7 @@ export function Hero() {
           className="text-4xl md:text-6xl lg:text-7xl mb-6"
         >
           Welcome to
-          <span className="block font-['Great_Vibes'] text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r from-[#8b66c2] to-[#69038e] bg-clip-text text-transparent pb-2.5 md:pb-1 mt-1">
+          <span className="block font-['Great_Vibes'] text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r text-[#9d33c4] bg-clip-text  pb-2.5 md:pb-1 mt-1">
             Ikigai
           </span>
           <span className='text-3xl md:text-4xl text-[#d8bde8] block'>SOUL WELLNESS</span> 

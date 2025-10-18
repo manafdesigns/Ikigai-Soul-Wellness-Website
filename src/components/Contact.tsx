@@ -16,25 +16,133 @@ export function Contact() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
-    alert('Thank you for your message! We\'ll get back to you soon.');
+  const sendToEmail = async () => {
+    const emailData = {
+      to: 'ikigaisoulwellness@gmail.com',
+      subject: `New Contact Form Submission from ${formData.name}`,
+      body: `
+New Contact Form Submission - Ikigai Soul Wellness
+
+Contact Details:
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+📞 Phone: ${formData.phone}
+🎯 Service Interest: ${formData.service}
+
+Message:
+${formData.message}
+
+---
+This message was sent from your website contact form.
+      `.trim()
+    };
+
+    // Method 1: Using mailto link (most reliable)
+    const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.body)}`;
+    window.location.href = mailtoLink;
   };
+
+  const sendToWhatsApp = () => {
+    // Format the message for WhatsApp
+    const whatsappMessage = `
+New Contact Form Submission - Ikigai Soul Wellness
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+📞 Phone: ${formData.phone}
+🎯 Service Interest: ${formData.service}
+💬 Message: ${formData.message}
+    `.trim();
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp phone number
+    const phoneNumber = '61449841838';
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Send to both WhatsApp and Email
+      await sendToEmail();
+      
+      // Small delay to ensure email client opens first
+      setTimeout(() => {
+        sendToWhatsApp();
+      }, 1000);
+
+      // Optional: Show success message
+      alert('Thank you for your message! Opening email and WhatsApp to send your inquiry.');
+
+      // Reset form after submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Alternative method using FormSubmit.co (free service)
+  // const handleSubmitWithFormSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+    
+  //   // This method requires changing the form to use FormSubmit.co
+  //   const form = e.target as HTMLFormElement;
+  //   form.action = 'https://formsubmit.co/sidhardhcr007@gmail.com';
+  //   form.method = 'POST';
+    
+  //   // Add hidden fields for FormSubmit configuration
+  //   const hiddenInputs = [
+  //     { name: '_subject', value: `New Contact from ${formData.name}` },
+  //     { name: '_template', value: 'table' },
+  //     { name: '_captcha', value: 'false' },
+  //     { name: '_next', value: window.location.href + '?success=true' }
+  //   ];
+
+  //   // Remove existing hidden inputs
+  //   const existingHiddenInputs = form.querySelectorAll('input[type="hidden"]');
+  //   existingHiddenInputs.forEach(input => input.remove());
+
+  //   // Add new hidden inputs
+  //   hiddenInputs.forEach(({ name, value }) => {
+  //     const input = document.createElement('input');
+  //     input.type = 'hidden';
+  //     input.name = name;
+  //     input.value = value;
+  //     form.appendChild(input);
+  //   });
+
+  //   // Submit the form
+  //   form.submit();
+  // };
 
   const contactInfo = [
     {
@@ -96,6 +204,7 @@ export function Contact() {
                 <CardTitle className="text-2xl">Send us a Message</CardTitle>
               </CardHeader>
               <CardContent>
+                {/* Method 1: Using JavaScript handlers (Recommended) */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -146,14 +255,12 @@ export function Contact() {
                         value={formData.service}
                         onChange={handleInputChange}
                         className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        required
                       >
                         <option value="">Select a service</option>
-                        <option value="massage">Massage Therapy</option>
-                        <option value="meditation">Meditation Classes</option>
-                        <option value="yoga">Yoga & Movement</option>
-                        <option value="nutrition">Nutrition Counseling</option>
-                        <option value="aromatherapy">Aromatherapy</option>
-                        <option value="workshops">Group Workshops</option>
+                        <option value="Reiki Healing">Reiki Healing</option>
+                        <option value="Access Bars Therapy">Access Bars Therapy</option>
+                        <option value="Ayurvedic Wellness">Ayurvedic Wellness</option>
                       </select>
                     </div>
                   </div>
@@ -168,6 +275,7 @@ export function Contact() {
                       placeholder="Tell us about your wellness goals or any questions you have..."
                       rows={4}
                       className="border-border focus:border-primary resize-none"
+                      required
                     />
                   </div>
 
@@ -177,13 +285,32 @@ export function Contact() {
                   >
                     <Button 
                       type="submit" 
+                      disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] hover:from-[#9674c8] hover:bg-[#9d33c4]/75 text-white py-6 text-lg"
                     >
                       <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </motion.div>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    Your message will be sent via email 
+                  </p>
                 </form>
+
+                {/* Alternative: FormSubmit.co method (uncomment to use) */}
+                {/*
+                <form 
+                  onSubmit={handleSubmitWithFormSubmit}
+                  className="space-y-6"
+                >
+                  {/* Same form fields as above *\/}
+                  <Button type="submit" className="w-full">
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message via Email
+                  </Button>
+                </form>
+                */}
               </CardContent>
             </Card>
           </motion.div>
@@ -238,7 +365,7 @@ export function Contact() {
                     <h3 className="text-xl mb-2">Find Us Here</h3>
                     <p className="text-muted-foreground mb-4">
                       4/10 EDMONDSON STREET<br />
-                      CAMPBELL, ACT, 2612, Australia
+                      CAMPBELL, ACT, 2612, Australia
                     </p>
                     <Button 
                       variant="outline"
