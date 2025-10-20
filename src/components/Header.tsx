@@ -64,7 +64,7 @@ export function Header() {
               </motion.button>
             ))}
             <Button
-              onClick={() => navigate('/form')}
+              onClick={() => scrollToSection('contact')}
               className="bg-[#9d33c4] text-white hover:bg-[#9d33c4]/75"
             >
               Book Now
@@ -102,7 +102,7 @@ export function Header() {
                 </motion.button>
               ))}
               <Button
-                onClick={() => navigate('/form')}
+                onClick={() => scrollToSection('contact')}
                 className="bg-primary hover:bg-primary/90 w-fit"
               >
                 Book Now

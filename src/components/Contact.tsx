@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+// import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -8,6 +8,24 @@ import { Button } from './ui/button';
 import { MapPin, Phone, Mail, Clock,  } from 'lucide-react';
 
 export function Contact() {
+// useEffect(() => {
+//   const widget = document.getElementById('schedulista-widget-00') as HTMLIFrameElement | null;
+//   if (widget) {
+//     widget.addEventListener('load', () => {
+//       try {
+//         const iframeDoc = widget.contentWindow?.document;
+//         if (!iframeDoc) return;
+//         const buttons = iframeDoc.querySelectorAll('button');
+//         buttons.forEach(button => {
+//           (button as HTMLElement).style.backgroundColor = '#9d33c4';
+//           (button as HTMLElement).style.borderColor = '#9d33c4';
+//         });
+//       } catch (err) {
+//         // Access to iframe content may be blocked by cross-origin policy; ignore errors.
+//       }
+//     });
+//   }
+// }, []);
   // const [formData, setFormData] = useState({
   //   name: '',
   //   email: '',
@@ -213,16 +231,19 @@ export function Contact() {
           scrolling="no" 
           width="100%" 
           height="100%"
-          className="absolute inset-0"
-          style={{ minHeight: '600px' }}
+          className="absolute inset-0 "
+          style={{ minHeight: '600px'}}
           loading="lazy"
+          
         />
+        
       </div>
       <script 
         id="schedulista-widget-script-00" 
         type="text/javascript" 
         src="https://www.schedulista.com/schedule/ikigaisoulwellness1/widget.js"
         async
+        
       />
     </CardContent>
   </Card>
