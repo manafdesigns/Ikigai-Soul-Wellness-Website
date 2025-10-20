@@ -1,114 +1,114 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Label } from './ui/label';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+// import { Input } from './ui/input';
+// import { Textarea } from './ui/textarea';
+// import { Label } from './ui/label';
+import { MapPin, Phone, Mail, Clock,  } from 'lucide-react';
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   service: '',
+  //   message: ''
+  // });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
 
-  const sendToEmail = async () => {
-    const emailData = {
-      to: 'ikigaisoulwellness@gmail.com',
-      subject: `New Contact Form Submission from ${formData.name}`,
-      body: `
-New Contact Form Submission - Ikigai Soul Wellness
+//   const sendToEmail = async () => {
+//     const emailData = {
+//       to: 'ikigaisoulwellness@gmail.com',
+//       subject: `New Contact Form Submission from ${formData.name}`,
+//       body: `
+// New Contact Form Submission - Ikigai Soul Wellness
 
-Contact Details:
-👤 Name: ${formData.name}
-📧 Email: ${formData.email}
-📞 Phone: ${formData.phone}
-🎯 Service Interest: ${formData.service}
+// Contact Details:
+// 👤 Name: ${formData.name}
+// 📧 Email: ${formData.email}
+// 📞 Phone: ${formData.phone}
+// 🎯 Service Interest: ${formData.service}
 
-Message:
-${formData.message}
+// Message:
+// ${formData.message}
 
----
-This message was sent from your website contact form.
-      `.trim()
-    };
+// ---
+// This message was sent from your website contact form.
+//       `.trim()
+//     };
 
-    // Method 1: Using mailto link (most reliable)
-    const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.body)}`;
-    window.location.href = mailtoLink;
-  };
+//     // Method 1: Using mailto link (most reliable)
+//     const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.body)}`;
+//     window.location.href = mailtoLink;
+//   };
 
-  const sendToWhatsApp = () => {
-    // Format the message for WhatsApp
-    const whatsappMessage = `
-New Contact Form Submission - Ikigai Soul Wellness
+//   const sendToWhatsApp = () => {
+//     // Format the message for WhatsApp
+//     const whatsappMessage = `
+// New Contact Form Submission - Ikigai Soul Wellness
 
-👤 Name: ${formData.name}
-📧 Email: ${formData.email}
-📞 Phone: ${formData.phone}
-🎯 Service Interest: ${formData.service}
-💬 Message: ${formData.message}
-    `.trim();
+// 👤 Name: ${formData.name}
+// 📧 Email: ${formData.email}
+// 📞 Phone: ${formData.phone}
+// 🎯 Service Interest: ${formData.service}
+// 💬 Message: ${formData.message}
+//     `.trim();
 
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
+//     // Encode the message for URL
+//     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // WhatsApp phone number
-    const phoneNumber = '61449841838';
+//     // WhatsApp phone number
+//     const phoneNumber = '61449841838';
     
-    // Create WhatsApp URL
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+//     // Create WhatsApp URL
+//     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-  };
+//     // Open WhatsApp in new tab
+//     window.open(whatsappUrl, '_blank');
+//   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    try {
-      // Send to both WhatsApp and Email
-      await sendToEmail();
+  //   try {
+  //     // Send to both WhatsApp and Email
+  //     await sendToEmail();
       
-      // Small delay to ensure email client opens first
-      setTimeout(() => {
-        sendToWhatsApp();
-      }, 1000);
+  //     // Small delay to ensure email client opens first
+  //     setTimeout(() => {
+  //       sendToWhatsApp();
+  //     }, 1000);
 
-      // Optional: Show success message
-      alert('Thank you for your message! Opening email and WhatsApp to send your inquiry.');
+  //     // Optional: Show success message
+  //     alert('Thank you for your message! Opening email and WhatsApp to send your inquiry.');
 
-      // Reset form after submission
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
+  //     // Reset form after submission
+  //     setFormData({
+  //       name: '',
+  //       email: '',
+  //       phone: '',
+  //       service: '',
+  //       message: ''
+  //     });
 
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //   } catch (error) {
+  //     console.error('Error submitting form:', error);
+  //     alert('There was an error sending your message. Please try again.');
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
 
   // Alternative method using FormSubmit.co (free service)
   // const handleSubmitWithFormSubmit = (e: React.FormEvent) => {
@@ -194,126 +194,39 @@ New Contact Form Submission - Ikigai Soul Wellness
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Card className="border-0 shadow-2xl">
-              <CardHeader>
-                <CardTitle className="text-2xl">Send us a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* Method 1: Using JavaScript handlers (Recommended) */}
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your full name"
-                        required
-                        className="border-border focus:border-primary"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your@email.com"
-                        required
-                        className="border-border focus:border-primary"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="(555) 123-4567"
-                        className="border-border focus:border-primary"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="service">Service Interest</Label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        required
-                      >
-                        <option value="">Select a service</option>
-                        <option value="Reiki Healing">Reiki Healing</option>
-                        <option value="Access Bars Therapy">Access Bars Therapy</option>
-                        <option value="Ayurvedic Wellness">Ayurvedic Wellness</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your wellness goals or any questions you have..."
-                      rows={4}
-                      className="border-border focus:border-primary resize-none"
-                      required
-                    />
-                  </div>
-
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] hover:from-[#9674c8] hover:bg-[#9d33c4]/75 text-white py-6 text-lg"
-                    >
-                      <Send className="w-5 h-5 mr-2" />
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </Button>
-                  </motion.div>
-
-                  <p className="text-sm text-muted-foreground text-center">
-                    Your message will be sent via email 
-                  </p>
-                </form>
-
-                {/* Alternative: FormSubmit.co method (uncomment to use) */}
-                {/*
-                <form 
-                  onSubmit={handleSubmitWithFormSubmit}
-                  className="space-y-6"
-                >
-                  {/* Same form fields as above *\/}
-                  <Button type="submit" className="w-full">
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message via Email
-                  </Button>
-                </form>
-                */}
-              </CardContent>
-            </Card>
-          </motion.div>
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <Card className="border-0 shadow-2xl">
+    <CardHeader>
+      <CardTitle className="text-2xl">Send us a Message</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="relative w-full overflow-hidden rounded-lg" style={{ height: 'auto', minHeight: '600px' }}>
+        <iframe 
+          id="schedulista-widget-00" 
+          src="https://www.schedulista.com/schedule/ikigaisoulwellness1?mode=widget" 
+          allowTransparency={true} 
+          frameBorder="0" 
+          scrolling="no" 
+          width="100%" 
+          height="100%"
+          className="absolute inset-0"
+          style={{ minHeight: '600px' }}
+          loading="lazy"
+        />
+      </div>
+      <script 
+        id="schedulista-widget-script-00" 
+        type="text/javascript" 
+        src="https://www.schedulista.com/schedule/ikigaisoulwellness1/widget.js"
+        async
+      />
+    </CardContent>
+  </Card>
+</motion.div>
 
           {/* Contact Info & Map */}
           <motion.div
