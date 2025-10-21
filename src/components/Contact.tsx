@@ -219,7 +219,7 @@ export function Contact() {
 >
   <Card className="border-0 shadow-2xl">
     <CardHeader>
-      <CardTitle className="text-2xl">Send us a Message</CardTitle>
+      {/* <CardTitle className="text-2xl">Send us a Message</CardTitle> */}
     </CardHeader>
     <CardContent>
       <div className="relative w-full overflow-hidden rounded-lg" style={{ height: 'auto', minHeight: '600px' }}>
