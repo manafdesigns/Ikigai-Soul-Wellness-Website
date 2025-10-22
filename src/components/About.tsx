@@ -14,7 +14,7 @@ import {  X } from 'lucide-react';
 const team = [
 	{
 		name: 'Nikita Sameer',
-		role: 'Founder of Ikigai Soul Wellness, Canberrar',
+		role: 'Founder of Ikigai Soul Wellness, Canberra',
 		image: '/DR. NIKITHA.png',
 		bio: 'Nikita is a certified energy healer and Ayurvedic practitioner with over a decade of experience in natural healing and mind-body wellness.  She completed her Bachelor of Ayurvedic Medicine and Surgery (BAMS) from the Government Ayurveda College, Trivandrum, India —one of India’s most prestigious institutions for Ayurvedic education. This rigorous training gave her a strong foundation in classical Ayurveda, natural medicine, and holistic wellness principles.'
 	}
