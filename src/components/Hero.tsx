@@ -19,7 +19,7 @@ export function Hero() {
           alt="Wellness Center"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/45" />
+        {/* <div className="absolute inset-0 bg-black/45" /> */}
       </div>
 
       {/* Content - Center on mobile, left on desktop */}
@@ -34,14 +34,14 @@ export function Hero() {
           <span className="block font-['Great_Vibes'] text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r text-[#9d33c4] bg-clip-text  pb-2.5 md:pb-1 mt-1">
             Ikigai
           </span>
-          <span className='text-3xl md:text-4xl text-[#d8bde8] block'>SOUL WELLNESS</span> 
+          <span className='text-3xl md:text-4xl text-[#42374b] block'>SOUL WELLNESS</span> 
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed"
+          className="text-lg text-[#440865] md:text-xl lg:text-2xl mb-8 leading-relaxed"
         >
           Your journey to wellness begins here. Discover inner peace, restore balance, 
           and embrace a healthier lifestyle with our comprehensive wellness services.
@@ -64,7 +64,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             onClick={() => scrollToSection('contact')}
-            className="border-white text-white hover:text-white hover:bg-[#9d33c4] px-4 py-6 text-lg "
+            className="bg-[#9d33c48c] text-white border-[#9d33c489] hover:bg-pink-600 lg:bg-transparent lg:text-[#42374b] lg:border-[#42374b] hover:lg:text-white hover:lg:bg-[#9d33c4] px-4 py-6 text-lg"
           >
             Book a free 30 min discovery session
           </Button>
