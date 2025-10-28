@@ -1,7 +1,7 @@
 // import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader } from './ui/card';
-import { Button } from './ui/button';
+// import { Button } from './ui/button';
 // import { Input } from './ui/input';
 // import { Textarea } from './ui/textarea';
 // import { Label } from './ui/label';
@@ -163,12 +163,12 @@ export function Contact() {
   // };
 
   const contactInfo = [
-    {
-      icon: MapPin,
-      title: 'Location',
-      details: ['4/10 EDMONDSON STREET', 'CAMPBELL, ACT, 2612, Australia'],
-      color: 'text-green-600'
-    },
+    // {
+    //   icon: MapPin,
+    //   title: 'Location',
+    //   details: ['4/10 EDMONDSON STREET', 'CAMPBELL, ACT, 2612, Australia'],
+    //   color: 'text-green-600'
+    // },
     {
       icon: Phone,
       title: 'Phone',
@@ -297,17 +297,17 @@ export function Contact() {
                   <div className="text-center">
                     <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                     <h3 className="text-xl mb-2">Find Us Here</h3>
-                    <p className="text-muted-foreground mb-4">
+                    {/* <p className="text-muted-foreground mb-4">
                       4/10 EDMONDSON STREET<br />
                       CAMPBELL, ACT, 2612, Australia
-                    </p>
-                    <Button 
+                    </p> */}
+                    {/* <Button 
                       variant="outline"
                       onClick={() => window.open('https://www.google.com/maps/place/Unit+4%2F10+Edmondson+St,+Campbell+ACT+2612,+Australia/@-35.2855097,149.1497889,17z/data=!3m1!4b1!4m6!3m5!1s0x6b164d9d251eee1f:0xf8b1955ea13abe26!8m2!3d-35.2855141!4d149.1523638!16s%2Fg%2F11lp618_xq?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D', '_blank')}
                       className="border-primary text-primary hover:bg-primary hover:text-white"
                     >
                       Open in Maps
-                    </Button>
+                    </Button> */}
                   </div>
                   
                   {/* Decorative Elements */}

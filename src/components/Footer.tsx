@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 import { Separator } from './ui/separator';
-import { Heart, Facebook,  Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Facebook,  Instagram, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -174,11 +174,11 @@ export function Footer() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
-                <MapPin className="w-5 h-5 mt-0.5 text-primary-foreground/60" />
+                {/* <MapPin className="w-5 h-5 mt-0.5 text-primary-foreground/60" />
                 <div>
                   <p className="text-primary-foreground/80">4/10 EDMONDSON STREET</p>
                   <p className="text-primary-foreground/80">CAMPBELL, ACT, 2612, Australia</p>
-                </div>
+                </div> */}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
