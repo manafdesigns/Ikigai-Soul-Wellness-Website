@@ -22,6 +22,29 @@ const reasons = [
 export function WhyChooseUs() {
   return (
     <section id="why-choose-us" className="py-20 bg-[#f9f6fd]">
+      {/* IICT Membership Section */}
+			<motion.div
+				initial={{ opacity: 0, y: 40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.7 }}
+				viewport={{ once: true }}
+				className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16"
+			>
+				<img
+					src="/IICET_logo.jpg"
+					alt="IICT Logo"
+					className="h-16 w-auto object-contain"
+					style={{ background: 'white', borderRadius: '8px', padding: '4px' }}
+				/>
+        <p className='font-semibold text-[#9d33c4]'>Full Member hologram</p>
+				<p className="text-lg text-gray-700 text-center md:text-left max-w-xl">
+					We are proud members of the{' '}
+					<span className="font-semibold text-[#9d33c4]">
+						International Institute for Complementary Therapists (IICT)
+					</span>
+					, upholding the highest standards in holistic wellness and professional practice.
+				</p>
+			</motion.div>
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

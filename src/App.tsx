@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { About } from './components/About';
-// import { Blog } from './components/Blog';
+import { WeHelpWith } from './components/WeHelpWith';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import FormPage from './pages/FormPage';
@@ -29,6 +29,9 @@ function MainContent() {
 
         {/* Services Section */}
         <Services />
+
+        {/* We Help With Section */}
+        <WeHelpWith />
 
         {/* About Section */}
         <About />
