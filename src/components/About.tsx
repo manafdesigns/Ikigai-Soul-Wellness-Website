@@ -142,7 +142,7 @@ export function About() {
 					viewport={{ once: true }}
 					className="text-center mb-12"
 				>
-					<h3 className="text-3xl mb-4">Meet Our Practitioner</h3>
+					<h3 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">Meet Our Practitioner</h3>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
 						Our experienced practitioner is dedicated to guiding you on your wellness journey.
 					</p>

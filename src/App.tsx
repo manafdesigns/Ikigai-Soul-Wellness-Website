@@ -24,14 +24,14 @@ function MainContent() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Why Choose Us Section */}
-        <WhyChooseUs />
+        {/* We Help With Section */}
+        <WeHelpWith />
 
         {/* Services Section */}
         <Services />
 
-        {/* We Help With Section */}
-        <WeHelpWith />
+        {/* Why Choose Us Section */}
+        <WhyChooseUs />
 
         {/* About Section */}
         <About />

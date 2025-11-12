@@ -24,6 +24,25 @@ export function Hero() {
 
       {/* Content - Center on mobile, left on desktop */}
       <div className="relative z-10 text-white max-w-2xl mx-4 lg:mx-16 xl:mx-24 px-4 text-center lg:text-left">
+         {/* Pink Blinking Star */}
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          opacity: [0.3, 1, 0.3],
+          scale: [1, 1, 1]
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="absolute top-1/2 right-1/4 z-10"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +55,44 @@ export function Hero() {
           </span>
           <span className='text-3xl md:text-4xl text-[#42374b] block'>SOUL WELLNESS</span> 
         </motion.h1>
-
+         {/* Pink Blinking Star */}
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          opacity: [0.3, 1, 0.3],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="absolute top-1/6  z-10"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </motion.div>
+      {/* Pink Blinking Star */}
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          opacity: [0.3, 1, 0.3],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="absolute -bottom-1/6  z-10"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,6 +166,26 @@ export function Hero() {
         }}
         className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full"
       />
+
+      {/* Pink Blinking Star */}
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          opacity: [0.3, 1, 0.3],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5
+        }}
+        className="absolute top-1/2 right-1/4 z-10"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
