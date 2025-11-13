@@ -39,7 +39,7 @@ export function Hero() {
         }}
         className="absolute top-1/2 right-1/4 z-10"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-yellow-500 ">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       </motion.div>
@@ -70,7 +70,7 @@ export function Hero() {
         }}
         className="absolute top-1/6  z-10"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-yellow-500">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       </motion.div>
@@ -89,7 +89,7 @@ export function Hero() {
         }}
         className="absolute -bottom-1/6  z-10"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-yellow-500">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       </motion.div>
@@ -151,7 +151,7 @@ export function Hero() {
           ease: "easeInOut",
           delay: 2
         }}
-        className="absolute top-1/3 right-20 w-3 h-3 bg-green-400 rounded-full"
+        className="absolute top-1/3 right-20 w-3 h-3 bg-yellow-500 rounded-full"
       />
       <motion.div
         animate={{ 
@@ -164,7 +164,7 @@ export function Hero() {
           ease: "easeInOut",
           delay: 1
         }}
-        className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full"
+        className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-yellow-500  rounded-full"
       />
 
       {/* Pink Blinking Star */}
@@ -182,7 +182,7 @@ export function Hero() {
         }}
         className="absolute top-1/2 right-1/4 z-10 sm:block hidden"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-pink-500">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-yellow-500">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       </motion.div>
