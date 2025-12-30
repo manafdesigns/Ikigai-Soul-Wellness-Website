@@ -1,6 +1,13 @@
 import { motion } from 'motion/react';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from './ui/card';
 
+const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 export function Pricing() {
     return (
         <section id="pricing" className="py-20 bg-white">
@@ -130,7 +137,7 @@ export function Pricing() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="pt-2 pb-6 flex justify-center">
-                                    <button className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
+                                    <button onClick={() => scrollToSection('contact')} className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
                                         Choose Starter
                                     </button>
                                 </CardFooter>
@@ -171,7 +178,7 @@ export function Pricing() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="pt-2 pb-6 flex justify-center">
-                                    <button className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-3 rounded-full font-bold shadow-md hover:shadow-lg transition-all">
+                                    <button onClick={() => scrollToSection('contact')}  className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-3 rounded-full font-bold shadow-md hover:shadow-lg transition-all">
                                         Choose Deep Healing
                                     </button>
                                 </CardFooter>
@@ -208,7 +215,7 @@ export function Pricing() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="pt-2 pb-6 flex justify-center">
-                                    <button className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
+                                    <button onClick={() => scrollToSection('contact')}  className="w-full bg-gradient-to-r from-[#9674c8] to-[#9b04d2] text-white py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
                                         Choose Transformation
                                     </button>
                                 </CardFooter>
