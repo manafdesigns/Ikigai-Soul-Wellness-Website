@@ -11,6 +11,7 @@ import { Footer } from './components/Footer';
 import FormPage from './pages/FormPage';
 import { ExpandableSocialButton } from './components/expandable-social-button';
 import { WhyChooseUs } from './components/WhyChooseUs';
+import { Pricing } from './components/Pricing';
 
 // Create a separate component for the main content that uses useNavigate
 function MainContent() {
@@ -38,6 +39,9 @@ function MainContent() {
 
         {/* Blog Section */}
         {/* <Blog /> */}
+
+        {/* Pricing Section */}
+        <Pricing />
 
         {/* Contact Section */}
         <Contact />

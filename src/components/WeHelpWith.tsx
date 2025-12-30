@@ -5,121 +5,121 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 
 const benefitsData = {
-    benefits: {
-      adults: {
-        category: "For Adults",
-        description: "You may benefit from our healing therapies if you are experiencing:",
-        sections: [
-          {
-            title: "Emotional and Mental Well-Being",
-            items: [
-              "Stress, anxiety, or emotional overwhelm",
-              "Low mood, sadness, or burnout",
-              "Feeling stuck, uninspired, or disconnected",
-              "Sleep disturbances or chronic fatigue",
-              "Lack of mental clarity or focus"
-            ],
-            image: "https://media.istockphoto.com/id/1369837941/photo/calm-young-woman-hold-hands-on-chest-praying.webp?a=1&b=1&s=612x612&w=0&k=20&c=2yVGDoXzWtoM1jyVj9YWjjKe56SZ_tY8qq8AmuyhKIY="
-          },
-          {
-            title: "Physical and Energetic Imbalances",
-            items: [
-              "Chronic pain, body tension, or fatigue",
-              "Hormonal imbalances or menstrual discomfort",
-              "Digestive issues, bloating, or sluggish metabolism",
-              "Headaches, migraines, or body aches",
-              "Post-illness recovery or low immunity"
-            ],
-            image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-          },
-          {
-            title: "Lifestyle and Personal Growth",
-            items: [
-              "Difficulty in decision-making or emotional healing",
-              "Desire for inner peace, spiritual growth, or self-connection",
-              "Releasing limiting beliefs or negative thought patterns",
-              "Support during life transitions (career, relationships, loss)",
-              "Desire to balance body, mind, and energy naturally"
-            ],
-            image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-          }
-        ]
-      },
-      childrenTeens: {
-        category: "For Children and Teens",
-        description: "Our gentle, age-appropriate energy balancing sessions can support:",
-        sections: [
-          {
-            title: "Emotional Support",
-            items: [
-              "Exam stress, anxiety, or fear",
-              "Restlessness or hyperactivity",
-              "Low confidence or social withdrawal",
-              "Nightmares or sleep disturbances"
-            ],
-            image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-          },
-          {
-            title: "Physical and Energy Imbalances",
-            items: [
-              "Frequent colds or weak immunity",
-              "Headaches, stomach discomfort, or fatigue",
-              "Emotional sensitivity or mood swings"
-            ],
-            image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-          },
-          {
-            title: "Development and Focus",
-            items: [
-              "Difficulty concentrating or learning challenges",
-              "Overstimulation from screen time or peer pressure",
-              "Encouraging calmness, confidence, and creativity"
-            ],
-            image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-          }
-        ]
-      },
-      womensWellness: {
-        category: "Women's Wellness",
-        items: [
-          "Menstrual irregularities and cramps",
-          "Fertility and preconception wellness support",
-          "Menopausal mood and energy balancing",
-          "Emotional support during pregnancy and postpartum"
-        ],
-        image: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
-      }
+  benefits: {
+    adults: {
+      category: "For Adults",
+      description: "You may benefit from our healing therapies if you are experiencing:",
+      sections: [
+        {
+          title: "Emotional and Mental Well-Being",
+          items: [
+            "Stress, anxiety, or emotional overwhelm",
+            "Low mood, sadness, or burnout",
+            "Feeling stuck, uninspired, or disconnected",
+            "Sleep disturbances or chronic fatigue",
+            "Lack of mental clarity or focus"
+          ],
+          image: "https://media.istockphoto.com/id/1369837941/photo/calm-young-woman-hold-hands-on-chest-praying.webp?a=1&b=1&s=612x612&w=0&k=20&c=2yVGDoXzWtoM1jyVj9YWjjKe56SZ_tY8qq8AmuyhKIY="
+        },
+        {
+          title: "Physical and Energetic Imbalances",
+          items: [
+            "Chronic pain, body tension, or fatigue",
+            "Hormonal imbalances or menstrual discomfort",
+            "Digestive issues, bloating, or sluggish metabolism",
+            "Headaches, migraines, or body aches",
+            "Post-illness recovery or low immunity"
+          ],
+          image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          title: "Lifestyle and Personal Growth",
+          items: [
+            "Difficulty in decision-making or emotional healing",
+            "Desire for inner peace, spiritual growth, or self-connection",
+            "Releasing limiting beliefs or negative thought patterns",
+            "Support during life transitions (career, relationships, loss)",
+            "Desire to balance body, mind, and energy naturally"
+          ],
+          image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    childrenTeens: {
+      category: "For Children and Teens",
+      description: "Our gentle, age-appropriate energy balancing sessions can support:",
+      sections: [
+        {
+          title: "Emotional Support",
+          items: [
+            "Exam stress, anxiety, or fear",
+            "Restlessness or hyperactivity",
+            "Low confidence or social withdrawal",
+            "Nightmares or sleep disturbances"
+          ],
+          image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          title: "Physical and Energy Imbalances",
+          items: [
+            "Frequent colds or weak immunity",
+            "Headaches, stomach discomfort, or fatigue",
+            "Emotional sensitivity or mood swings"
+          ],
+          image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          title: "Development and Focus",
+          items: [
+            "Difficulty concentrating or learning challenges",
+            "Overstimulation from screen time or peer pressure",
+            "Encouraging calmness, confidence, and creativity"
+          ],
+          image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    womensWellness: {
+      category: "Women's Wellness",
+      items: [
+        "Menstrual irregularities and cramps",
+        "Fertility and preconception wellness support",
+        "Menopausal mood and energy balancing",
+        "Emotional support during pregnancy and postpartum"
+      ],
+      image: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-4.0.0&auto=format&fit=crop&w=500&q=80"
     }
-  };
+  }
+};
 
 export function WeHelpWith() {
 
- 
+
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-white to-muted/50">
       {/* IICT Membership Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16"
-            >
-              <img
-                src="/IICET_logo.jpg"
-                alt="IICT Logo"
-                className="h-16 w-auto object-contain"
-                style={{ background: 'white', borderRadius: '8px', padding: '4px' }}
-              />
-              <p className='text-xl font-semibold text-[#9d33c4]'>Full Member</p>
-              <p className="text-lg text-gray-700 text-center md:text-left max-w-xl">
-                We are proud members of the{' '}
-                <span className="font-semibold text-[#9d33c4]">
-                  International Institute for Complementary Therapists (IICT)
-                </span>
-                , upholding the highest standards in holistic wellness and professional practice.
-              </p>
-            </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16"
+      >
+        <img
+          src="/IICET_logo.jpg"
+          alt="IICT Logo"
+          className="h-16 w-auto object-contain"
+          style={{ background: 'white', borderRadius: '8px', padding: '4px' }}
+        />
+        <p className='text-xl font-semibold text-[#9d33c4]'>Full Member</p>
+        <p className="text-lg text-gray-700 text-center md:text-left max-w-xl">
+          We are proud members of the{' '}
+          <span className="font-semibold text-[#9d33c4]">
+            International Institute for Complementary Therapists (IICT)
+          </span>
+          , upholding the highest standards in holistic wellness and professional practice.
+        </p>
+      </motion.div>
       <div className="container mx-auto px-4">
         {/* Benefits Section */}
         <motion.div
@@ -132,7 +132,7 @@ export function WeHelpWith() {
           <h3 className="text-3xl md:text-4xl mb-12 text-center bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">
             Who Can Benefit
           </h3>
-          
+
           {/* Adults Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -164,7 +164,7 @@ export function WeHelpWith() {
                       {section.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start">
                           <span className="text-primary mr-2">•</span>
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-base text-muted-foreground ">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -205,7 +205,7 @@ export function WeHelpWith() {
                       {section.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start">
                           <span className="text-primary mr-2">•</span>
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-base text-muted-foreground">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -241,7 +241,7 @@ export function WeHelpWith() {
                       {benefitsData.benefits.womensWellness.items.map((item, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-primary mr-2">•</span>
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-base text-muted-foreground">{item}</span>
                         </li>
                       ))}
                     </ul>
