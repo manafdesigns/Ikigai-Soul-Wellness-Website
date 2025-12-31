@@ -23,7 +23,7 @@ export function Pricing() {
                     <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] pb-2.5 md:pb-4 bg-clip-text text-transparent">
                         Pricing
                     </h2>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
                         Invest in your well-being with our healing sessions and packages.
                     </p>
                     <Button
