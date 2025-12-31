@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-
+import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from './ui/card';
 
 const scrollToSection = (id: string) => {
