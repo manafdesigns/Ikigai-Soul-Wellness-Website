@@ -57,7 +57,7 @@ export function About() {
 
 				{/* Story Section */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-					<motion.div
+					{/*	<motion.div
 						initial={{ opacity: 0, x: -50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8 }}
@@ -80,9 +80,9 @@ export function About() {
                   <div className="text-3xl font-bold text-primary">15+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
-              </motion.div> */}
+              </motion.div> 
 						</div>
-					</motion.div>
+					</motion.div> */}
 
 					<motion.div
 						initial={{ opacity: 0, x: 50 }}
