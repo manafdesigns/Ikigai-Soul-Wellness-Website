@@ -128,6 +128,7 @@ export function Pricing() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="flex-grow flex flex-col items-center justify-center space-y-4 pt-4">
+                                    <p className=" text-gray-800" > Perfect for stress relief and short-term energy balancing</p>
                                     <div className="text-center space-y-1">
                                         <p className="text-gray-400 line-through text-lg">$240</p>
                                         <p className="text-4xl font-bold text-gray-800">$228</p>
