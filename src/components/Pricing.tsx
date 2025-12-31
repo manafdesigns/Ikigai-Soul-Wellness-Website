@@ -26,6 +26,14 @@ export function Pricing() {
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         Invest in your well-being with our healing sessions and packages.
                     </p>
+                    <Button
+            size="lg"
+            variant="outline"
+            onClick={() => scrollToSection('contact')}
+            className="bg-[#9d33c48c] text-white border-[#9d33c489] hover:bg-pink-600 lg:bg-transparent lg:text-[#42374b] lg:border-[#42374b] hover:lg:text-white hover:lg:bg-[#9d33c4] px-4 py-6 text-lg"
+          >
+            Book a free 30 min discovery session
+          </Button>
                 </motion.div>
 
                 {/* 1. Reiki Distant Healing Session Pricing (Table) */}
