@@ -10,7 +10,7 @@ const services = [
     title: 'Reiki Healing',
     description: 'A powerful energy healing modality that works on the physical, emotional, and spiritual levels. Reiki helps release blocked energy, promotes deep relaxation, and supports natural healing.',
     image: '/istockphoto-975131512-612x612.jpg',
-    price: '30 min – 50$ | 60 min -80$'
+    price: '30 min – 45$ | 60 min -80$'
   },
   // {
   //   icon: Brain,
@@ -24,14 +24,12 @@ const services = [
     title: 'Access Bars Therapy',
     description: 'An innovative, hands-on process that clears limiting beliefs and mental clutter stored in the brain. Access Bars helps you let go of fear, judgment, and old patterns, making space for clarity, ease, and change.',
     image: 'https://t3.ftcdn.net/jpg/06/96/29/44/240_F_696294441_lIZImFPIuQf9BaIQsSmT1qmJeKXhr0Nt.jpg',
-    price: '60min -80$'
   },
   {
     icon: Leaf,
     title: 'Ayurvedic Wellness',
     description: 'Work with us to create lasting change in your health, mindset, and soul journey through personalized coaching and energy work.',
     image: 'https://www.itoozhiayurveda.in/wp-content/uploads/2023/01/Ayurvedic-medicine-scaled.jpg',
-    price: '60min -80$'
   },
   // {
   //   icon: Sparkles,
