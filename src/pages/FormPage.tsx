@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
+import { SEO } from '../components/SEO';
 
 export default function FormPage() {
-  
+
 
   return (
     <motion.div
@@ -10,6 +11,11 @@ export default function FormPage() {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-background text-foreground flex items-center justify-center py-12 px-4"
     >
+      <SEO
+        title="Book a Session"
+        description="Book your healing session with Ikigai Soul Wellness. Fill out our intake form to get started on your wellness journey."
+        url="https://ikigaisoulwellness.com.au/form"
+      />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,12 +30,12 @@ export default function FormPage() {
         >
           Book Your Session
         </motion.h2>
-        
+
         <div className="space-y-6">
           <div className="w-full overflow-hidden rounded-lg">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLScZwDexclGVLfUvnz_7YL35_y5LT2J_4jRi8YnHa22UMKCHrw/viewform?embedded=true" 
-              width="100%" 
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScZwDexclGVLfUvnz_7YL35_y5LT2J_4jRi8YnHa22UMKCHrw/viewform?embedded=true"
+              width="100%"
               height="800" // Reduced height to fit better
               frameBorder={0}
               marginHeight={0}
@@ -41,7 +47,7 @@ export default function FormPage() {
             </iframe>
           </div>
         </div>
-        
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

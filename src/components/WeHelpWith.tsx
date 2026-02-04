@@ -129,9 +129,9 @@ export function WeHelpWith() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl md:text-4xl mb-12 text-center bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl mb-12 text-center bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">
             Who Can Benefit
-          </h3>
+          </h2>
 
           {/* Adults Section */}
           <motion.div
@@ -141,7 +141,7 @@ export function WeHelpWith() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h4 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.adults.category}</h4>
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.adults.category}</h3>
             <p className="text-lg text-muted-foreground mb-6">{benefitsData.benefits.adults.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefitsData.benefits.adults.sections.map((section) => (
@@ -182,7 +182,7 @@ export function WeHelpWith() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h4 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.childrenTeens.category}</h4>
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.childrenTeens.category}</h3>
             <p className="text-lg text-muted-foreground mb-6">{benefitsData.benefits.childrenTeens.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefitsData.benefits.childrenTeens.sections.map((section) => (
@@ -222,7 +222,7 @@ export function WeHelpWith() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.womensWellness.category}</h4>
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#9674c8] to-[#9b04d2] bg-clip-text text-transparent">{benefitsData.benefits.womensWellness.category}</h3>
             <Card className="border-0 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 max-w-4xl  group">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-2/5">

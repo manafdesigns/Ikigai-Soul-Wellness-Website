@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 import { Separator } from './ui/separator';
-import { Heart, Facebook,  Instagram, Mail, Phone } from 'lucide-react';
+import { Heart, Facebook, Instagram, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -25,8 +25,8 @@ export function Footer() {
       { name: 'Our Team', action: () => scrollToSection('about') },
       { name: 'Blog', action: () => scrollToSection('blog') },
       { name: 'Contact', action: () => scrollToSection('contact') },
-      { name: 'Privacy Policy', action: () => {} },
-      { name: 'Terms of Service', action: () => {} }
+      { name: 'Privacy Policy', action: () => { } },
+      { name: 'Terms of Service', action: () => { } }
     ]
   };
 
@@ -49,7 +49,7 @@ export function Footer() {
             viewport={{ once: true }}
             className=" flex  gap-10 items-center justify-center flex-col md:flex-row"
           >
-            <img className="w-screen h-full" src="https://tse1.mm.bing.net/th/id/OIP.PsgtNhW9G55Q5jW3AKUvLgHaDv?pid=Api&P=0&h=220" alt="" />
+            <img className="w-screen h-full" src="https://tse1.mm.bing.net/th/id/OIP.PsgtNhW9G55Q5jW3AKUvLgHaDv?pid=Api&P=0&h=220" alt="Aboriginal art representing connection to land and community" />
             <p className="text-lg ">
               We acknowledge that the Traditional Custodians of Country throughout Australia and their continuing connection to land, sea and community. We pay our respects to all Aboriginal and Torres Strait Islander peoples, their cultures and to their Elders past and present.
             </p>
@@ -77,7 +77,7 @@ export function Footer() {
               Ikigai Soul Wellness
             </motion.h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Your trusted partner in holistic wellness, helping you find balance, 
+              Your trusted partner in holistic wellness, helping you find balance,
               peace, and vitality through comprehensive mind-body-spirit care.
             </p>
             <div className="flex space-x-4">
@@ -222,10 +222,10 @@ export function Footer() {
           <div className="flex items-center space-x-2 text-primary-foreground/60">
             <span>Made with</span>
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.2, 1],
               }}
-              transition={{ 
+              transition={{
                 duration: 1,
                 repeat: Infinity,
                 ease: "easeInOut"

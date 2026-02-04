@@ -1,8 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
 // import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import {  X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 // const stats = [
 // 	{ icon: Users, label: 'Happy Clients', value: '2,500+' },
@@ -106,7 +106,7 @@ export function About() {
 					</motion.div>
 				</div>
 
-        	
+
 
 				{/* Stats Section */}
 				{/* <motion.div
@@ -184,7 +184,7 @@ export function About() {
 							</div>
 						</motion.div>
 					))}
-                </div>
+				</div>
 			</div>
 
 			{/* Modal */}
@@ -231,41 +231,41 @@ export function About() {
 			)}
 
 			{/* Certifications slider (slides left → right via repeating animation) */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="mt-12"
-            >
-                <div className="overflow-hidden">
-                    {/* Inner strip animated horizontally. Duplicate set for seamless loop */}
-                    <motion.div
-                        aria-hidden="true"
-                        className="flex items-center gap-8 w-max"
-                        animate={{ x: ['0%', '-50%'] }}
-                        transition={{ duration: 14, ease: 'linear', repeat: Infinity }}
-                    >
-                        <img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Certificate 1" className="h-24 object-contain" />
-                        <img src="CBD.png" alt="Certificate 2" className="h-24 object-contain" />
-                        <img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Logo" className="h-24 object-contain" />
-                        <img src="/FIRST AID.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/REIKHI.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/ACCESS BARS LOGO.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/GOV KERALA AYURVEDA.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/BAMS.png" alt="Certificate 3" className="h-24 object-contain" />
+			<motion.div
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.6 }}
+				className="mt-12"
+			>
+				<div className="overflow-hidden">
+					{/* Inner strip animated horizontally. Duplicate set for seamless loop */}
+					<motion.div
+						aria-hidden="true"
+						className="flex items-center gap-8 w-max"
+						animate={{ x: ['0%', '-50%'] }}
+						transition={{ duration: 14, ease: 'linear', repeat: Infinity }}
+					>
+						<img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Working with Vulnerable People Registration" className="h-24 object-contain" />
+						<img src="CBD.png" alt="CBD College Certificate" className="h-24 object-contain" />
+						<img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Full Member Logo" className="h-24 object-contain" />
+						<img src="/FIRST AID.png" alt="First Aid Certificate" className="h-24 object-contain" />
+						<img src="/REIKHI.png" alt="Reiki Healing Certificate" className="h-24 object-contain" />
+						<img src="/ACCESS BARS LOGO.png" alt="Access Bars Practitioner Logo" className="h-24 object-contain" />
+						<img src="/GOV KERALA AYURVEDA.png" alt="Government of Kerala Ayurveda Certificate" className="h-24 object-contain" />
+						<img src="/BAMS.png" alt="Bachelor of Ayurvedic Medicine and Surgery Degree" className="h-24 object-contain" />
 
-                        {/* duplicate */}
-                        <img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Certificate 1" className="h-24 object-contain" />
-                        <img src="CBD.png" alt="Certificate 2" className="h-24 object-contain" />
-                        <img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Logo" className="h-24 object-contain" />
-                        <img src="/FIRST AID.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/REIKHI.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/ACCESS BARS LOGO.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/GOV KERALA AYURVEDA.png" alt="Certificate 3" className="h-24 object-contain" />
-						<img src="/BAMS.png" alt="Certificate 3" className="h-24 object-contain" />
-                    </motion.div>
-                </div>
-            </motion.div>
-        </section>
-    );
+						{/* duplicate */}
+						<img src="/ACT GOV VULNERABLE PEOPLE.png" alt="Working with Vulnerable People Registration" className="h-24 object-contain" />
+						<img src="CBD.png" alt="CBD College Certificate" className="h-24 object-contain" />
+						<img src="/NRT-Logo-pmd1zlrfw3jlc8rps6n3le6x97p81ff17o9pucfhlo.png" alt="IICT Full Member Logo" className="h-24 object-contain" />
+						<img src="/FIRST AID.png" alt="First Aid Certificate" className="h-24 object-contain" />
+						<img src="/REIKHI.png" alt="Reiki Healing Certificate" className="h-24 object-contain" />
+						<img src="/ACCESS BARS LOGO.png" alt="Access Bars Practitioner Logo" className="h-24 object-contain" />
+						<img src="/GOV KERALA AYURVEDA.png" alt="Government of Kerala Ayurveda Certificate" className="h-24 object-contain" />
+						<img src="/BAMS.png" alt="Bachelor of Ayurvedic Medicine and Surgery Degree" className="h-24 object-contain" />
+					</motion.div>
+				</div>
+			</motion.div>
+		</section>
+	);
 }
